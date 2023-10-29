@@ -1,8 +1,8 @@
-import { fetchGreeting } from "./graphql/fetchGreeting";
+import { getBanner } from "./graphql/getBanner";
 
 const target = document.getElementById("response");
 
 (async function () {
-  const res = await fetchGreeting();
-  target!.innerHTML += res;
+  const res = await getBanner();
+  target!.innerHTML += JSON.stringify(res);
 })();
